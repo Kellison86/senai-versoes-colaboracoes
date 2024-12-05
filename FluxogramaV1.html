@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluxograma de Controle de Estoque</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #2E8B57;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .step {
+            margin-bottom: 20px;
+        }
+        .shape {
+            font-weight: bold;
+            color: #4682B4;
+        }
+        .description {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Fluxograma de Controle de Estoque</h1>
+
+    <div class="step">
+        <h2>Passo 1: Iniciar</h2>
+        <p><span class="shape">Forma:</span> Oval</p>
+        <p class="description">Indica o início do processo.</p>
+    </div>
+
+    <div class="step">
+        <h2>Passo 2: Solicitar Saldo Inicial</h2>
+        <p><span class="shape">Forma:</span> Retângulo</p>
+        <p class="description">O sistema solicita o saldo inicial da peça.</p>
+    </div>
+
+    <div class="step">
+        <h2>Passo 3: Loop para Entrada de Dados</h2>
+        <p><span class="shape">Forma:</span> Losango</p>
+        <p class="description">Verifica se o usuário deseja continuar inserindo dados.</p>
+    </div>
+
+    <div class="step">
+        <h2>Passo 4: Entrada do Tipo de Operação</h2>
+        <p><span class="shape">Forma:</span> Retângulo</p>
+        <p class="description">Solicita ao usuário o tipo de operação (1=compra, 2=venda).</p>
+    </div>
+
+    <div class="step">
+        <h2>Passo 5: Entrada da Quantidade</h2>
+        <p><span class="shape">Forma:</span> Retângulo</p>
+        <p class="description">Solicita ao usuário a quantidade de peças.</p>
+    </div>
+
+    <div class="step">
+        <h2>Passo 6: Verificação do Tipo de Operação</h2>
+        <p><span class="shape">Forma:</span> Losango</p>
+        <p class="description">Verifica se a operação é uma compra.</p>
+    </div>
+
+    <div class="step">
+        <h2>Passo 7: Operação de Compra</h2>
+        <p><span class="shape">Forma:</span> Retângulo</p>
+        <p class="description">Adiciona a quantidade ao saldo se for uma compra.</p>
+    </div>
+
+    <div class="step">
+        <h2>Passo 8: Verificação de Saldo para Venda</h2>
+        <p><span class="shape">Forma:</span> Losango</p>
+        <p class="description">Verifica se a quantidade para venda é menor ou igual ao saldo disponível.</p>
+    </div>
+
+    <div class="step">
+        <h2>Passo 9: Operação de Venda</h2>
+        <p><span class="shape">Forma:</span> Retângulo</p>
+        <p class="description">Subtrai a quantidade do saldo se a venda for possível.</p>
+    </div>
+
+    <div class="step">
+        <h2>Passo 10: Mensagem de Saldo Insuficiente</h2>
+        <p><span class="shape">Forma:</span> Retângulo</p>
+        <p class="description">Exibe uma mensagem se não houver saldo suficiente.</p>
+    </div>
+
+    <div class="step">
+        <h2>Passo 11: Exibir Saldo Atualizado</h2>
+        <p><span class="shape">Forma:</span> Retângulo</p>
+        <p class="description">Mostra o saldo atualizado após cada operação.</p>
+    </div>
+
+    <div class="step">
+        <h2>Passo 12: Encerrar o Sistema</h2>
+        <p><span class="shape">Forma:</span> Oval</p>
+        <p class="description">Indica o encerramento do processo.</p>
+    </div>
+
+</body>
+</html>

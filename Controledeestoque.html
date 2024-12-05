@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Controle de Estoque</title>
+</head>
+<body>
+    <script>
+        function controleEstoque() {
+            let saldo = parseInt(prompt("Informe o saldo inicial da peça: "));
+            let continuar = true;
+        
+            while (continuar) {
+                // Solicitar tipo de entrada
+                let tipoEntrada = parseInt(prompt("Digite o tipo de entrada (1=compra, 2=venda): "));
+                
+                // Solicitar quantidade
+                let quantidade = parseInt(prompt("Digite a quantidade de peças: "));
+        
+                // Verificar o tipo de entrada
+                if (tipoEntrada === 1) {
+                    // Adicionar quantidade ao saldo (compra)
+                    saldo += quantidade;
+                } else if (tipoEntrada === 2) {
+                    // Verificar se a quantidade é menor ou igual ao saldo
+                    if (quantidade <= saldo) {
+                        // Subtrair quantidade do saldo (venda)
+                        saldo -= quantidade;
+                    } else {
+                        // Exibir mensagem de saldo insuficiente
+                        alert("Saldo insuficiente");
+                    }
+                } else {
+                    alert("Tipo de entrada inválido");
+                }
+        
+                // Exibir saldo atualizado
+                alert(`Saldo atualizado: ${saldo}`);
+        
+                // Verificar se o usuário deseja continuar
+                let resposta = prompt("Deseja continuar? (s/n): ").toLowerCase();
+                if (resposta !== 's') {
+                    continuar = false;
+                    alert("Sistema encerrado");
+                }
+            }
+        }
+        
+        controleEstoque();
+    </script>
+</body>
+</html>
